@@ -12,7 +12,7 @@ We trained different models. The best ones are:
 * Long Short-Term Memory:
     * 79.8% accuracy
 * Bert transformer:
-    * 80% accuracy
+    * 79.6% accuracy
 
 While all models delivered decent results, Logistic Regression was the most efficient in terms of both training time and prediction speed compared to LSTM and BERT. The BERT Transformer model could potentially be enhanced by adding additional layers, though this would significantly increase computation time.
 
