@@ -19,8 +19,6 @@ While all models delivered decent results, Logistic Regression was the most effi
 ## Data
 The data for this project can be found at this [link](https://www.kaggle.com/datasets/kazanova/sentiment140/data).
 
-To run the notebooks, install the following dependencies:
-
 ## Technologies Used
 
 - **Python**: Programming language used for the project.
@@ -33,5 +31,6 @@ To run the notebooks, install the following dependencies:
 - **Jupyter Notebook**: Interactive environment for running the code and documenting the project.
 - **Google Colab / Kaggle**: Cloud-based platforms used for training the models.
 
+To run the notebooks, install the following dependencies:
 ```bash
 pip install -r requirements.txt
