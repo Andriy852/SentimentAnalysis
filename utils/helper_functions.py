@@ -126,6 +126,37 @@ def preprocess_text(text: str) -> List[str]:
     wordLemm = WordNetLemmatizer()
     text = text.lower()
 
+    text = re.sub(r"((http://)[^ ]*|(https://)[^ ]*|( www\.)[^ ]*)", "url", text)
+
+    text = re.sub('@[^\s]+', "user", text)
+    text = re.sub(r'#\S+', ' hashtag', text)
+
+    text = re.sub("[^a-zA-Z0-9]", " ", text)
+
+    text = re.sub(r"(.)\1\1+", r"\1\1", text)
+
+    stop_words = set(stopwords.words('english'))
+    tokens = word_tokenize(text)
+    tokens = [word for word in tokens if word not in stop_words]
+
+    tokens = [wordLemm.lemmatize(word) for word in tokens]
+    return tokens
+
+def preprocess_text_bert(text: str) -> List[str]:
+    """
+    Preprocesses the input text by performing several text cleaning operations, 
+    including converting to lowercase, removing URLs, usernames, non-alphanumeric characters, 
+    stopwords, and lemmatizing words.
+
+    Args:
+    text (str): The input text to preprocess.
+
+    Returns:
+    List[str]: A list of processed tokens (words).
+    """
+    wordLemm = WordNetLemmatizer()
+    text = text.lower()
+
     text = re.sub(r"((http://)[^ ]*|(https://)[^ ]*|( www\.)[^ ]*)", "", text)
 
     text = re.sub('@[^\s]+', "", text)
