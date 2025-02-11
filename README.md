@@ -10,7 +10,7 @@ We trained different models. The best ones are:
 * Logistic Regression:
     * 79.4% accuracy 
 * Long Short-Term Memory:
-    * 79.8% accuracy
+    * 80% accuracy
 * Bert transformer:
     * 79.6% accuracy
 
